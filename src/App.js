@@ -1,3 +1,10 @@
+
+import {Routes, Route, Link} from 'react-router-dom';
+import Layout from './components/Layout';
+import Home from './components/Home';
+import CreatePost from './components/CreatePost';
+import About from './components/About';
+import NotFound from './components/NotFound';
 import SingleArticle from "./stelios_comp/SingleArticle";
 
 const contentful = require("contentful");
@@ -7,10 +14,14 @@ const client = contentful.createClient({
 });
 const App = () => {
   return (
-    <>
-      <div> Hello there</div>
-      <SingleArticle />
-    </>
+    <Routes>
+      <Route path='/' element={<Layout />} >
+        <Route index element={<Home />} />
+        <Route path='new-post' element={<CreatePost />} />
+        <Route path='about' element={<About />} />
+        <Route path='*' element={<NotFound />} />
+      </Route>
+    </Routes>
   );
 };
 
