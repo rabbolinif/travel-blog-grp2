@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 const contentful = require("contentful");
 const client = contentful.createClient({
   space: "h5ckac8m4bnj",
-  accessToken: "8QnCWCQ_AAFD1jgJtBYFzUeCK3qHz2zpZEhBrIb9oc4",
+  //accessToken: "HIDDEN",
 });
 const SingleArticle = () => {
   const [post, setPost] = useState({});
