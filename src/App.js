@@ -10,7 +10,6 @@ import SingleArticle from "./stelios_comp/SingleArticle";
 const contentful = require("contentful");
 const client = contentful.createClient({
   space: "h5ckac8m4bnj",
-  accessToken: "8QnCWCQ_AAFD1jgJtBYFzUeCK3qHz2zpZEhBrIb9oc4",
 });
 const App = () => {
   return (
