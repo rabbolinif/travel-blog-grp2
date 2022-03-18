@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 
 const contentful = require("contentful");
 const client = contentful.createClient({
+  accessToken: process.env.REACT_APP_API_KEY,
   space: "h5ckac8m4bnj",
-  //accessToken: "HIDDEN",
 });
 const SingleArticle = () => {
   const [post, setPost] = useState({});
