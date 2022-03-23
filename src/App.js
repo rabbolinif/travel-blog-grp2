@@ -9,7 +9,7 @@ import SingleArticle from "./components/SingleArticle";
 const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<Layout />}>
+      <Route path="/travel-blog-grp2" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="new-post" element={<CreatePost />} />
         <Route path="about" element={<About />} />

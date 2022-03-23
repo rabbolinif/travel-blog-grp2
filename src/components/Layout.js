@@ -27,7 +27,7 @@ const Layout = () => {
             <div className="" id="navbarsExample04">
               <ul className="navbar-nav me-auto mb-2 mb-md-0">
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/">
+                  <NavLink className="nav-link" to="/travel-blog-grp2">
                     Home
                   </NavLink>
                 </li>
