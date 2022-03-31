@@ -32,7 +32,7 @@ const Layout = () => {
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/about">
+                  <NavLink className="nav-link" to="/travel-blog-grp2/about">
                     About
                   </NavLink>
                 </li>
