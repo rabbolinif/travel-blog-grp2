@@ -1,4 +1,4 @@
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./components/Home";
 import CreatePost from "./components/CreatePost";
@@ -9,7 +9,7 @@ import SingleArticle from "./components/SingleArticle";
 const App = () => {
   return (
     <Routes>
-      <Route path="/travel-blog-grp2" element={<Layout />}>
+      <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="new-post" element={<CreatePost />} />
         <Route path="about" element={<About />} />

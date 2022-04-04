@@ -33,6 +33,7 @@ const SingleArticle = () => {
     <>
       <div className="container d-flex flex-column align-items-center">
         <img
+          alt="#"
           className="image-fluid mt-5 mb-5"
           style={{ width: `${60}rem` }}
           src={post.imageUrl}
