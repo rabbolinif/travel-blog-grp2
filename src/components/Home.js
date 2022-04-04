@@ -38,11 +38,7 @@ const Home = () => {
               className="card m-4 "
               style={{ width: `${18}rem`, height: 500, borderRadius: 15 }}
             >
-              <img
-                className="card-img-top"
-                src={post.imageUrl}
-                alt="Card image cap"
-              />
+              <img className="card-img-top" src={post.imageUrl} alt="#" />
               <div className="card-body d-flex flex-start flex-column justify-content-between">
                 <h5 className="card-title">{post.title}</h5>
                 <p className="card-text mb-3">
