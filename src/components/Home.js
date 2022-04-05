@@ -1,31 +1,19 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-const contentful = require("contentful");
-const client = contentful.createClient({
-  accessToken: process.env.REACT_APP_API_KEY,
-  space: "h5ckac8m4bnj",
-});
+import axios from "axios";
+
 const Home = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    client.getEntries().then(function (entries) {
-      entries.items.forEach(function (entry) {
-        if (entry.fields.name) {
-          setPosts((prev) => [
-            ...prev,
-            {
-              title: entry.fields.name,
-              imageUrl: entry.fields.photo?.fields.file.url,
-              author: entry.fields?.author,
-              paragraph: entry.fields.body.content[0].content[0].value,
-              date: entry.fields?.date,
-              id: entry.sys?.id,
-            },
-          ]);
-        }
-      });
-    });
+    (async () => {
+      try {
+        const { data } = await axios.get("http://localhost:5000/posts");
+        setPosts(data);
+      } catch (error) {
+        console.log(error);
+      }
+    })();
   }, []);
 
   return (
