@@ -2,7 +2,7 @@ const CreatePost = () => {
   return (
     <form
       className="container d-flex flex-column justify-content-between align-items-center flex-wrap"
-      action="https://localhost:5000/posts"
+      action="http://localhost:5000/posts"
       enctype="multipart/form-data"
       method="post"
     >
@@ -32,7 +32,7 @@ const CreatePost = () => {
       <input
         type="file"
         className=" col-6 mt-5 form-control-file align-self-center"
-        name="avatar"
+        name="image"
       />
       <button type="submit" className="col-3 mt-5 btn btn-primary">
         Create new post
