@@ -8,7 +8,9 @@ const Home = () => {
   useEffect(() => {
     (async () => {
       try {
-        const { data } = await axios.get("http://localhost:5000/posts");
+        const { data } = await axios.get(
+          "https://posts-api-wd024.herokuapp.com/posts"
+        );
         setPosts(data);
         console.log(data);
       } catch (error) {
@@ -30,7 +32,7 @@ const Home = () => {
             >
               <img
                 className="card-img-top"
-                src={`http://localhost:5000/uploads/${post.image}`}
+                src={`https://posts-api-wd024.herokuapp.com/uploads/${post.image}`}
                 alt="#"
               />
               <div className="card-body d-flex flex-start flex-column justify-content-between">

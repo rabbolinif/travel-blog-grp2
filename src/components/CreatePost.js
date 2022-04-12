@@ -2,7 +2,7 @@ const CreatePost = () => {
   return (
     <form
       className="container d-flex flex-column justify-content-between align-items-center flex-wrap"
-      action="http://localhost:5000/posts"
+      action="https://posts-api-wd024.herokuapp.com/posts"
       enctype="multipart/form-data"
       method="post"
     >
