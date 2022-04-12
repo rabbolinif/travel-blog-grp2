@@ -36,6 +36,11 @@ const Layout = () => {
                     About
                   </NavLink>
                 </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/new-post">
+                    Create post
+                  </NavLink>
+                </li>
               </ul>
             </div>
           </div>
